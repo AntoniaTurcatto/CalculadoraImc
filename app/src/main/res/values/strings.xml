@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculadora IMC - Turma C</string>
+    <string name="calculadora_imc">Calculadora IMC</string>
+    <string name="calcular">Calcular</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="sobre_o_imc">O IMC (Índice de Massa Corporal) é uma medida que estima a relação entre a massa corporal (peso) e a altura de uma pessoa. Ele é usado para avaliar se um indivíduo está abaixo do peso, com peso saudável, com sobrepeso ou obeso, com base em uma faixa de valores pré-definidos.\n\nA classificação típica do IMC é a seguinte:</string>
+    <string name="_16"><![CDATA[< 16]]></string>
+    <string name="info_fc_maxima">A Frequência Cardíaca (FC) é o número de batimentos do coração em um minuto\n A FCmax (Frequência Cardíaca Máxima) é o número máximo de batimentos que o coração pode dar em um minuto\n A FCmax é pouco influenciada pelo treino\n A FCmax diminui progressivamente com a idade (perdemos cerca de 1 pulsação por ano)\n A FC em repouso evolui em função da condição física: quanto mais treinar, mais a sua FC em repouso diminui.</string>
+</resources>

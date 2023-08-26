@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TMBActivity"
+    android:padding="20sp">
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TituloRoxo"
+        android:text="Calculadora TMB"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonVoltar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonInfo"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonVoltar"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonVoltar" />
+
+    <ImageButton
+        android:id="@+id/imageButtonVoltar"
+        style="@style/BotaoRoxo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        android:contentDescription="Voltar"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonInfo"
+        style="@style/BotaoRoxo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_info_24"
+        android:contentDescription="O que é TMB?"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/TextoRoxo"
+        android:text="Sexo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonVoltar" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:singleSelection="true"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMasculino"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:checked="true"
+            android:text="Masculino" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFeminino"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/idade"
+        style="@style/TextoRoxo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup" />
+    <LinearLayout
+        android:id="@+id/linearLayoutIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/idade"
+        android:layout_marginVertical="8sp">
+        <SeekBar
+            android:id="@+id/seekbarIdade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:max="150"/>
+        <TextView
+            android:id="@+id/textViewIdade"
+            style="@style/texto_2"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/altura"
+        style="@style/TextoRoxo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Altura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutIdade" />
+    <LinearLayout
+        android:id="@+id/linearLayoutAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8sp"
+        app:layout_constraintTop_toBottomOf="@+id/altura">
+        <SeekBar
+            android:id="@+id/seekbarAltura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:max="250"/>
+        <TextView
+            android:id="@+id/textViewAltura"
+            style="@style/texto_2"
+            android:layout_weight="1"
+            android:text="0" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/peso"
+        style="@style/TextoRoxo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutAltura" />
+    <LinearLayout
+        android:id="@+id/linearLayoutPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8sp"
+        app:layout_constraintTop_toBottomOf="@+id/peso">
+        <SeekBar
+            android:id="@+id/seekbarPeso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:max="25000"/>
+        <TextView
+            android:id="@+id/textViewPeso"
+            style="@style/texto_2"
+            android:layout_weight="1"
+            android:text="0"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPeso" />
+
+    <TextView
+        android:id="@+id/textViewTeste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Teste da seekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcular" />
+</androidx.constraintlayout.widget.ConstraintLayout>

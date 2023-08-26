@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_da_dialog"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O que é o IMC?"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="@string/sobre_o_imc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_azul_escuro" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza grave" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_azul" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza moderada" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_azul_claro" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza grave" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_verde" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza grave" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_amarelo" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza moderada" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_laranja" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza moderada" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_vermelho" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza grave" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+
+        <ImageView
+            style="@style/quadradinho"
+            android:src="@drawable/quadrado_vermelho_escuro" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="Magreza grave" />
+
+        <TextView
+            style="@style/texto_1"
+            android:text="@string/_16" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/buttonMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

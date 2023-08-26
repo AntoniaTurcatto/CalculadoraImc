@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="@drawable/background_da_dialog">
+    <TextView
+        android:id="@+id/tituloRoxo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O que é TMB"
+        style="@style/TextoRoxo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A taxa metabólica basal, conhecida também como gasto energético basal, é a quantidade de energia que o corpo, em repouso, gasta para manter as suas funções vitais, como respiração, batimentos do coração e manutenção da temperatura corporal."
+        android:layout_margin="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Os valores da taxa metabólica basal variam de acordo com a idade, o peso e o sexo, e servem para entender o total de energia que o corpo gasta por dia, sendo uma ferramenta útil para auxiliar no planejamento alimentar de pessoas que desejam manter o peso, engordar ou emagrecer."
+        android:layout_margin="8dp"/>
+    <Button
+        android:id="@+id/buttonSairDaDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"/>
+</LinearLayout>

@@ -7,6 +7,27 @@
     tools:context=".MainActivity"
     >
 
+    <TextView
+        android:id="@+id/textView12"
+        style="@style/TituloRoxo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora da Saúde"
+        android:layout_marginVertical="130dp"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/saudavel"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
     <Button
         android:id="@+id/buttonIMC"
         android:layout_width="wrap_content"
@@ -21,8 +42,8 @@
         android:id="@+id/buttonTMB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TMB"
         android:layout_marginTop="16dp"
+        android:text="TMB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonFrequenciaCardiacaMaxima" />
@@ -35,6 +56,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Button
+        android:id="@+id/buttonRegistrosSalvos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registros salvos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTMB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

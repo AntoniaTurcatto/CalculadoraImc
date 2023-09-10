@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:gravity="center"
+    android:background="@drawable/custom_border">
+
+    <TextView
+        android:id="@+id/tipo_celula"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="wrap_content"
+        style="@style/TextoRoxo"
+        android:text="FCM: "
+        android:gravity="start"/>
+
+    <TextView
+        android:id="@+id/resultado_celula"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        style="@style/TextoRoxo"
+        android:text="20,04"
+        android:gravity="start"/>
+
+    <TextView
+        android:id="@+id/data_celula"
+        style="@style/TextoRoxo"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="29/04/2005 HH:mm"
+        android:gravity="end"/>
+
+
+</LinearLayout>

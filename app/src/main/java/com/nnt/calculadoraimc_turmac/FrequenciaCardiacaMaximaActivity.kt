@@ -4,10 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.SeekBar
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.nnt.calculadoraimc_turmac.databinding.ActivityFrequenciaCardiacaMaximaBinding
 import com.nnt.calculadoraimc_turmac.databinding.DialogFrequenciaCardiacaMaximaBinding
+import com.nnt.calculadoraimc_turmac.model.Calculo
 
 
 class FrequenciaCardiacaMaximaActivity : AppCompatActivity() {
@@ -45,12 +49,25 @@ class FrequenciaCardiacaMaximaActivity : AppCompatActivity() {
         })
 
         binding.buttonCalcular.setOnClickListener {
-            var fcMaxima : Int
+            val fcMaxima : Double
             if (binding.chipMasculino.isChecked){
-                fcMaxima =220 - idade
+                fcMaxima =220 - idade.toDouble()
             } else {
-                fcMaxima = 226 - idade
+                fcMaxima = 226 - idade.toDouble()
             }
+            Thread{
+                val app = application as App
+                val dao = app.db.calculoDao()
+                val atualizarId = intent.extras?.getInt("atualizarId")
+                if (atualizarId != null){
+                    dao.atualizar(Calculo(id = atualizarId, "fcm", resultado = fcMaxima))
+                } else {
+                    dao.inserir(Calculo(tipo = "fcm", resultado = fcMaxima))
+                }
+                runOnUiThread {
+                    Toast.makeText(this,"Registro salvo ou atualizado com sucesso!", Toast.LENGTH_LONG).show()
+                }
+            }.start()
             val intent = Intent(this, FrequenciaCardiacaMaximaResultActivity::class.java)
             intent.putExtra("fcMaxima",fcMaxima)
             startActivity(intent)
@@ -77,4 +94,18 @@ class FrequenciaCardiacaMaximaActivity : AppCompatActivity() {
         alertDialog.show()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (item.itemId == R.id.menu_mostrar_registros){
+            val intent = Intent(this,ListaDeCalculosActivity::class.java)
+            intent.putExtra("tipo","fcm")
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }

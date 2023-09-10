@@ -25,5 +25,9 @@ class MainActivity : AppCompatActivity() {
         binding.buttonFrequenciaCardiacaMaxima.setOnClickListener {
             startActivity(Intent(this,FrequenciaCardiacaMaximaActivity::class.java))
         }
+
+        binding.buttonRegistrosSalvos.setOnClickListener {
+            startActivity(Intent(this, ListaDeCalculosActivity::class.java))
+        }
     }
 }

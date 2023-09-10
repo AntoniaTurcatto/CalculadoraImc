@@ -44,7 +44,7 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza grave" />
+            android:text="Magreza Grau III" />
 
         <TextView
             style="@style/texto_1"
@@ -56,11 +56,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza moderada" />
+            android:text="Magreza Grau II" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text="16,0 a 16,9." />
 
         <ImageView
             style="@style/quadradinho"
@@ -68,11 +68,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza grave" />
+            android:text="Magreza Grau I" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text="17,0 a 18,4 " />
 
         <ImageView
             style="@style/quadradinho"
@@ -80,11 +80,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza grave" />
+            android:text="Saudável" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text="18,5 a 24,9 " />
 
         <ImageView
             style="@style/quadradinho"
@@ -92,11 +92,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza moderada" />
+            android:text="Sobrepeso" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text="25,0 a 29,9" />
 
         <ImageView
             style="@style/quadradinho"
@@ -104,11 +104,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza moderada" />
+            android:text="Obesidade Grau I" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text="30,0 a 34,9" />
 
         <ImageView
             style="@style/quadradinho"
@@ -116,11 +116,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza grave" />
+            android:text="Obesidade Grau II" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text="35,0 a 39,9" />
 
         <ImageView
             style="@style/quadradinho"
@@ -128,11 +128,11 @@
 
         <TextView
             style="@style/texto_1"
-            android:text="Magreza grave" />
+            android:text="Obesidade Grau III" />
 
         <TextView
             style="@style/texto_1"
-            android:text="@string/_16" />
+            android:text=">= 40" />
     </GridLayout>
 
     <Button

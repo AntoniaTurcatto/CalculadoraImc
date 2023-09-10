@@ -14,7 +14,7 @@ class FrequenciaCardiacaMaximaResultActivity : AppCompatActivity() {
         binding = ActivityFrequenciaCardiacaMaximaResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.textViewResultadoTMB.text=intent.getIntExtra("fcMaxima",0).toString()
+        binding.textViewResultadoTMB.text=intent.getDoubleExtra("fcMaxima",0.0).toInt().toString()
 
         binding.imageButtonVoltar.setOnClickListener {
             startActivity(Intent(this,FrequenciaCardiacaMaximaActivity::class.java))

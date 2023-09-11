@@ -49,7 +49,6 @@ class TMBActivity : AppCompatActivity() {
                 //faça algo quando parar a ação na seekbar
                 if (seekBar != null) {
                     idade = seekBar.progress
-                    binding.textViewTeste.text = idade.toString()
                 }
             }
         })
